@@ -8,10 +8,13 @@ html, body {
     height: 100%;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 #page {
     width: 80%;
-    min-height: 100%;
-    background: #EEEEEE;
+    background: #DDDDDD;
 }
 
 #title {
@@ -30,9 +33,6 @@ nav {
     text-align: center;
     width: 75%;
     height: 5%;
-    padding: 5%;
-    background: #DDDDDD;
-    border-bottom: 2px solid #333;
 }
 
 nav table {
@@ -48,24 +48,31 @@ nav table td {
     text-decoration: bold;
     height: 100%;
     width: 33%;
-    border-right: 2px solid #AAAAAA;
     cursor: pointer;
-    background: #CCCCCC;
+    background: #BBBBBB;
 }
 
-nav table tr :last-child {
-    border: none;
+nav table td:hover, nav table td:active, nav table td:focus {
+    background: #AAAAAA;
+    text-decoration: underline darkred;
 }
 
 #content {
     padding: 5%;
     width: 75%;
-    height: 100%;
-    background: #DDDDDD;
+}
+
+#content h2 {
+    text-decoration: underline darkred;
 }
 
 .hidden {
     display: none;
+}
+
+.selected{
+    background: #AAAAAA;
+    text-decoration: underline darkred;
 }
 
 #home {
@@ -77,18 +84,26 @@ nav table tr :last-child {
 #projects {
 }
 
+#footer {
+    bottom: 0px;
+    width: 80%;
+    height: 10%;
+    /*background: #EEEEEE;*/
+    background: linear-gradient(#DDDDDD, #FFFFFF, #FFF);
+}
+
 ::-webkit-scrollbar
 {
-  width: 12px;  /* for vertical scrollbars */
-  height: 12px; /* for horizontal scrollbars */
+    width: 12px;  /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
 }
 
 ::-webkit-scrollbar-track
 {
-  background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 ::-webkit-scrollbar-thumb
 {
-  background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }

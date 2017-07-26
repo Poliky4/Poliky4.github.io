@@ -1,43 +1,52 @@
-let btnHome = document.getElementById('btnHome');
-let btnAbout = document.getElementById('btnAbout');
-let btnProjects = document.getElementById('btnProjects');
+console.log('Welcome to my h̶o̶m̶e̶p̶a̶g̶e console!');
 
-let divHome = document.getElementById('home');
-let divAbout = document.getElementById('about');
-let divProjects = document.getElementById('projects');
-
-btnHome.onclick = () => {
-    hidePages();
-    showPage(divHome);
+let home = {
+    btn: document.getElementById('btnHome'),
+    div: document.getElementById('home')
 }
-
-btnAbout.onclick = () => {
-    hidePages();
-    showPage(divAbout);
+let about = {
+    btn: document.getElementById('btnAbout'),
+    div: document.getElementById('about')
 }
-
-btnProjects.onclick = () => {
-    hidePages();
-    showPage(divProjects);
+let projects = {
+    btn: document.getElementById('btnProjects'),
+    div: document.getElementById('projects')
 }
+let pages = [home, about, projects]
 
-function showPage(page){
-    removeClass(page, 'hidden');
+let utils = new Utils();
+
+pages.forEach(utils.setOnClickNavBtns);
+
+utils.hidePages();
+utils.showPage(home);
+
+
+
+function Utils() {
+    function removeClass (elem, c){
+        elem.classList.remove(c);
+    }
+    function addClass (elem, c){
+        elem.classList.add(c);
+    }
+
+    return {
+        showPage: function(page){
+            removeClass(page.div, 'hidden');
+            addClass(page.btn, 'selected');
+        },
+        hidePages: function(){
+            pages.forEach(page => {
+                addClass(page.div, 'hidden');
+                removeClass(page.btn, 'selected');
+            });
+        },
+        setOnClickNavBtns: function(page){
+            page.btn.onclick = () => {
+                utils.hidePages();
+                utils.showPage(page);
+            }
+        },
+    }
 }
-
-function hidePages(){
-    addClass(divHome, 'hidden');
-    addClass(divAbout, 'hidden');
-    addClass(divProjects, 'hidden');
-}
-
-function removeClass(e, c){
-    e.classList.remove(c);
-}
-
-function addClass(e, c){
-    e.classList.add(c);
-}
-
-hidePages();
-showPage(divHome);
