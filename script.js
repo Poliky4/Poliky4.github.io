@@ -24,6 +24,8 @@ utils.showPage(home);
 
 
 function Utils() {
+    
+    // private
     function removeClass (elem, c){
         elem.classList.remove(c);
     }
@@ -31,6 +33,7 @@ function Utils() {
         elem.classList.add(c);
     }
 
+    // public
     return {
         showPage: function(page){
             removeClass(page.div, 'hidden');
