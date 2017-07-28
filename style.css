@@ -1,22 +1,27 @@
 * {
     margin: 0 auto;
     padding: 0;
-}
-
-html, body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #111;
+}
+
+html {
+    max-width: 1000px;
     height: 100%;
-    overflow-y: hidden;
 }
 
 body {
+    height: 100%;
     overflow-y: scroll;
+}
+
+a {
+    color: #111;    
+    text-decoration: underline darkred;
 }
 
 #page {
     width: 80%;
-    max-width: 1000px;
     min-height:90%;
     background: #EEEEEE;
 }
@@ -26,6 +31,10 @@ body {
     padding-bottom: 5%;
     width: 100%;
     text-align: center;
+}
+
+#title h5 {
+    font-weight: normal;
 }
 
 #titleUnderline {
@@ -45,12 +54,9 @@ nav table {
     border-spacing: 10px;
 }
 
-nav table tr {
-    height: 100%;
-}
-
 nav table td {
-    padding: 5% 0%;
+    border-radius: 25px;
+    padding: 2%;
     text-decoration: bold;
     height: 100%;
     width: 33%;
@@ -75,26 +81,8 @@ nav table td:hover, nav table td:active, nav table td:focus {
 }
 
 #content h3 {
+    text-align: center;
     text-decoration: underline #111;
-    padding-bottom: 2%;
-}
-
-#content a {
-    color: #111;    
-    text-decoration: underline darkred;
-}
-
-#content p {
-    padding-bottom: 5%;
-}
-
-#home {
-}
-
-#about {
-}
-
-#projects {
 }
 
 #footer {
@@ -132,4 +120,10 @@ nav table td:hover, nav table td:active, nav table td:focus {
 ::-webkit-scrollbar-thumb
 {
     background: rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 500px){
+    #page, #footer {
+        width: 100%;
+    }
 }
