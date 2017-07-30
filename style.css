@@ -17,13 +17,13 @@ body {
 
 a {
     color: #111;    
-    text-decoration: underline darkred;
+    text-decoration: underline #811;
 }
 
 #page {
     width: 80%;
     min-height:90%;
-    background: #EEEEEE;
+    background: rgba(220, 220, 220, 0.5);
 }
 
 #title {
@@ -40,7 +40,8 @@ a {
 #titleUnderline {
     width: 50%;
     height: 2px;
-    background: radial-gradient(darkred, #EEE);
+    border-radius: 5em;
+    background: radial-gradient(#811, rgba(255, 255, 255, 0));
     margin-bottom: 5px;
 }
 
@@ -61,23 +62,23 @@ nav table td {
     height: 100%;
     width: 33%;
     cursor: pointer;
-    background: #BBBBBB;
+    background: #BBB;
 }
 
 nav table td:hover, nav table td:active, nav table td:focus {
-    background: #AAAAAA;
-    text-decoration: underline darkred;
+    background: #AAA;
+    text-decoration: underline #811;
 }
 
 #content {
     margin-top: 5%;
     width: 75%;
     padding-left: 5%;
-    border-left: 2px dashed #AAA;
+    border-left: 2px dashed #AAA; 
 }
 
 #content h2 {
-    text-decoration: underline darkred;
+    text-decoration: underline #811;
 }
 
 #content h3 {
@@ -89,7 +90,7 @@ nav table td:hover, nav table td:active, nav table td:focus {
     width: 80%;
     max-width: 1000px;    
     height: 10%;
-    background: linear-gradient(#EEEEEE, #FFFFFF, #FFF);
+    background: linear-gradient(rgba(220, 220, 220, 0.5), #FFF, #FFF);
 }
 
 .hidden {
@@ -97,8 +98,8 @@ nav table td:hover, nav table td:active, nav table td:focus {
 }
 
 .selected{
-    background: #AAAAAA;
-    text-decoration: underline darkred;
+    background: #AAA;
+    text-decoration: underline #811;
 }
 
 /*
