@@ -22,8 +22,18 @@ a {
 
 #page {
     width: 80%;
-    min-height:90%;
-    background: rgba(220, 220, 220, 0.5);
+    min-height:100%;
+    padding-bottom: 5%;
+    background: rgba(220, 220, 220, 0.7);
+    box-shadow: 0px 0px 5em 2em rgba(220, 220, 220, 1);
+}
+
+#footer {
+    width: 80%;
+    max-width: 1000px;    
+    height: 10%;
+    background: linear-gradient(rgba(220, 220, 220, 0.7), #FFF, #FFF);
+    box-shadow: 0px 0px 5em 2em rgba(220, 220, 220, 0.7);
 }
 
 #title {
@@ -84,13 +94,6 @@ nav table td:hover, nav table td:active, nav table td:focus {
 #content h3 {
     text-align: center;
     text-decoration: underline #111;
-}
-
-#footer {
-    width: 80%;
-    max-width: 1000px;    
-    height: 10%;
-    background: linear-gradient(rgba(220, 220, 220, 0.5), #FFF, #FFF);
 }
 
 .hidden {
