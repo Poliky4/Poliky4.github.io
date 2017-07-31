@@ -22,7 +22,7 @@ a {
 
 #page {
     width: 80%;
-    min-height:100%;
+    min-height: 95%;
     padding-bottom: 5%;
     background: rgba(220, 220, 220, 0.7);
     box-shadow: 0px 0px 5em 2em rgba(220, 220, 220, 1);
@@ -41,6 +41,8 @@ a {
     padding-bottom: 5%;
     width: 100%;
     text-align: center;
+    user-select: none;
+    cursor: default;
 }
 
 #title h5 {
@@ -56,6 +58,7 @@ a {
 }
 
 nav {
+    user-select: none;
     text-align: center;
     width: 75%;
 }
