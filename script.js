@@ -21,12 +21,13 @@ pages.forEach(utils.setOnClickNavBtns);
 utils.hidePages();      // hide all pages
 utils.showPage(home);   // and show home
 
-// http request to my Raspberry Pi to log visits
+// one way http request to my Raspberry Pi to log visits
 let webstatsData = {time: new Date(), browser: navigator.appName, platform: navigator.platform}
 let webstatsRequest = new XMLHttpRequest();
-webstatsRequest.open('POST', 'http://89.236.60.99:1337/webstats', true);
+webstatsRequest.open('POST', 'http://localhost:1337/webstats', true); // true for async
 webstatsRequest.setRequestHeader("Content-Type", "text/plain");
 webstatsRequest.send(JSON.stringify(webstatsData));
+webstatsRequest.abort(); // this is what makes it one way
 
 function Utils() {
     
