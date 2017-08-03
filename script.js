@@ -18,10 +18,15 @@ let utils = new Utils();
 
 pages.forEach(utils.setOnClickNavBtns);
 
-utils.hidePages();
-utils.showPage(home);
+utils.hidePages();      // hide all pages
+utils.showPage(home);   // and show home
 
-
+// http request to my Raspberry Pi to log visits
+let webstatsData = {time: new Date(), browser: navigator.appName, platform: navigator.platform}
+let webstatsRequest = new XMLHttpRequest();
+webstatsRequest.open('POST', 'http://89.236.60.99:1337/webstats', true);
+webstatsRequest.setRequestHeader("Content-Type", "text/plain");
+webstatsRequest.send(JSON.stringify(webstatsData));
 
 function Utils() {
     
