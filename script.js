@@ -1,4 +1,4 @@
-console.log('Welcome to my h̶o̶m̶e̶p̶a̶g̶e console!');
+console.log('Welcome to my h̶o̶m̶e̶p̶a̶g̶e console! ;)');
 
 let home = {
     btn: document.getElementById('btnHome'),
@@ -12,21 +12,28 @@ let projects = {
     btn: document.getElementById('btnProjects'),
     div: document.getElementById('projects')
 }
+
 let pages = [home, about, projects]
 
 let utils = new Utils();
 
-pages.forEach(utils.setOnClickNavBtns);
+// set click events for buttons
+pages.forEach(page => {
+    page.btn.onclick = () => {
+        utils.hidePages();
+        utils.showPage(page);
+    }
+});
 
 utils.hidePages();      // hide all pages
 utils.showPage(home);   // and show home
 
+let webstatsData = JSON.stringify({time: new Date(), browser: navigator.appName, platform: navigator.platform});
 // one way http request to my Raspberry Pi to log visits
-let webstatsData = {time: new Date(), browser: navigator.appName, platform: navigator.platform}
 let webstatsRequest = new XMLHttpRequest();
-webstatsRequest.open('POST', 'http://localhost:1337/webstats', true); // true for async
+webstatsRequest.open('POST', 'webstats.molin.ninja', true); // true for async
 webstatsRequest.setRequestHeader("Content-Type", "text/plain");
-webstatsRequest.send(JSON.stringify(webstatsData));
+webstatsRequest.send(webstatsData);
 webstatsRequest.abort(); // this is what makes it one way
 
 function Utils() {
@@ -50,12 +57,6 @@ function Utils() {
                 addClass(page.div, 'hidden');
                 removeClass(page.btn, 'selected');
             });
-        },
-        setOnClickNavBtns: function(page){
-            page.btn.onclick = () => {
-                utils.hidePages();
-                utils.showPage(page);
-            }
         },
     }
 }
