@@ -31,7 +31,7 @@ utils.showPage(home);   // and show home
 let webstatsData = JSON.stringify({time: new Date(), browser: navigator.appName, platform: navigator.platform});
 // one way http request to my Raspberry Pi to log visits
 let webstatsRequest = new XMLHttpRequest();
-webstatsRequest.open('POST', 'http://webstats.molin.ninja', true); // true for async
+webstatsRequest.open('POST', 'https://webstats.molin.ninja', true); // true for async
 webstatsRequest.setRequestHeader("Content-Type", "text/plain");
 webstatsRequest.send(webstatsData);
 webstatsRequest.abort(); // this is what makes it one way
