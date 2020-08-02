@@ -19,7 +19,8 @@ let utils = new Utils()
 
 // set click events for buttons
 pages.forEach(page => {
-  page.btn.onclick = () => {
+  page.btn.onclick = e => {
+    e.preventDefault();
     utils.hidePages()
     utils.showPage(page)
   }
