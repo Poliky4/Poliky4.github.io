@@ -7,13 +7,13 @@
 }
 
 html {
-  max-width: 1000px;
   height: 100%;
   font-size: 10px;
 }
 
 body {
   font-size: 1.6rem;
+  max-width: 1000px;
   margin: 0 auto;
   height: 100%;
   overflow-y: scroll;
