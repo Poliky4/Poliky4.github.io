@@ -30,7 +30,7 @@ a {
   background: rgba(220, 220, 220, 0.7);
   box-shadow: 0px 0px 5em 2em rgba(220, 220, 220, 1);
 }
-@media (max-width: 500px) {
+@media (max-width: 678px) {
   #page {
     width: 100%;
   }
