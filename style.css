@@ -1,8 +1,14 @@
+:root {
+  --color-primary: #111;
+  --color-secondary: #811;
+  --color-transparent: transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: #111;
+  color: var(--color-primary);
   box-sizing: border-box;
 }
 
@@ -20,8 +26,8 @@ body {
 }
 
 a {
-  color: #111;
-  text-decoration: underline #811;
+  color: var(--color-primary);
+  text-decoration: underline var(--color-secondary);
 }
 
 #page {
@@ -56,7 +62,7 @@ a {
   width: 50%;
   height: 0.2rem;
   border-radius: 5em;
-  background: radial-gradient(#811, rgba(255, 255, 255, 0));
+  background: radial-gradient(var(--color-secondary), var(--color-transparent));
   margin-bottom: 0.5rem;
 }
 
@@ -86,7 +92,7 @@ nav table td:hover,
 nav table td:active,
 nav table td:focus {
   background: #aaa;
-  text-decoration: underline #811;
+  text-decoration: underline var(--color-secondary);
 }
 
 #content {
@@ -98,12 +104,12 @@ nav table td:focus {
 }
 
 #content h2 {
-  text-decoration: underline #811;
+  text-decoration: underline var(--color-secondary);
 }
 
 #content h3 {
   text-align: center;
-  text-decoration: underline #111;
+  text-decoration: underline var(--color-primary);
 }
 
 .hidden {
@@ -112,7 +118,7 @@ nav table td:focus {
 
 .selected {
   background: #aaa;
-  text-decoration: underline #811;
+  text-decoration: underline var(--color-secondary);
 }
 
 /*
