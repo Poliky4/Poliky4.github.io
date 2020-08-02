@@ -1,0 +1,23 @@
+{
+  "name": "Poliky4.github.io",
+  "version": "1.0.0",
+  "description": "Personal homepage for Pontus Molin",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Poliky4/Poliky4.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Poliky4/Poliky4.github.io/issues"
+  },
+  "homepage": "https://github.com/Poliky4/Poliky4.github.io#readme",
+  "devDependencies": {
+    "sergey": "0.0.13"
+  }
+}
