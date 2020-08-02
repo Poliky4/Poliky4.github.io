@@ -1,111 +1,113 @@
 * {
-    margin: 0 auto;
-    padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #111;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #111;
 }
 
 html {
-    max-width: 1000px;
-    height: 100%;
+  max-width: 1000px;
+  height: 100%;
 }
 
 body {
-    height: 100%;
-    overflow-y: scroll;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 a {
-    color: #111;    
-    text-decoration: underline #811;
+  color: #111;
+  text-decoration: underline #811;
 }
 
 #page {
-    width: 80%;
-    min-height: 95%;
-    padding-bottom: 5%;
-    background: rgba(220, 220, 220, 0.7);
-    box-shadow: 0px 0px 5em 2em rgba(220, 220, 220, 1);
+  width: 80%;
+  min-height: 95%;
+  padding-bottom: 5%;
+  background: rgba(220, 220, 220, 0.7);
+  box-shadow: 0px 0px 5em 2em rgba(220, 220, 220, 1);
 }
 
 #footer {
-    width: 80%;
-    max-width: 1000px;    
-    height: 10%;
-    background: linear-gradient(rgba(220, 220, 220, 0.7), #FFF, #FFF);
-    box-shadow: 0px 0px 5em 2em rgba(220, 220, 220, 0.7);
+  width: 80%;
+  max-width: 1000px;
+  height: 10%;
+  background: linear-gradient(rgba(220, 220, 220, 0.7), #fff, #fff);
+  box-shadow: 0px 0px 5em 2em rgba(220, 220, 220, 0.7);
 }
 
 #title {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    width: 100%;
-    text-align: center;
-    user-select: none;
-    cursor: default;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 100%;
+  text-align: center;
+  user-select: none;
+  cursor: default;
 }
 
 #title h5 {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 #titleUnderline {
-    width: 50%;
-    height: 2px;
-    border-radius: 5em;
-    background: radial-gradient(#811, rgba(255, 255, 255, 0));
-    margin-bottom: 5px;
+  width: 50%;
+  height: 2px;
+  border-radius: 5em;
+  background: radial-gradient(#811, rgba(255, 255, 255, 0));
+  margin-bottom: 5px;
 }
 
 nav {
-    user-select: none;
-    text-align: center;
-    width: 75%;
+  user-select: none;
+  text-align: center;
+  width: 75%;
 }
 
 nav table {
-    width: 100%;
-    border-spacing: 10px;
+  width: 100%;
+  border-spacing: 10px;
 }
 
 nav table td {
-    border-radius: 25px;
-    padding: 2%;
-    text-decoration: bold;
-    height: 100%;
-    width: 33%;
-    cursor: pointer;
-    background: #BBB;
+  border-radius: 25px;
+  padding: 2%;
+  text-decoration: bold;
+  height: 100%;
+  width: 33%;
+  cursor: pointer;
+  background: #bbb;
 }
 
-nav table td:hover, nav table td:active, nav table td:focus {
-    background: #AAA;
-    text-decoration: underline #811;
+nav table td:hover,
+nav table td:active,
+nav table td:focus {
+  background: #aaa;
+  text-decoration: underline #811;
 }
 
 #content {
-    margin-top: 5%;
-    width: 75%;
-    padding-left: 5%;
-    border-left: 2px dashed #AAA; 
+  margin-top: 5%;
+  width: 75%;
+  padding-left: 5%;
+  border-left: 2px dashed #aaa;
 }
 
 #content h2 {
-    text-decoration: underline #811;
+  text-decoration: underline #811;
 }
 
 #content h3 {
-    text-align: center;
-    text-decoration: underline #111;
+  text-align: center;
+  text-decoration: underline #111;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-.selected{
-    background: #AAA;
-    text-decoration: underline #811;
+.selected {
+  background: #aaa;
+  text-decoration: underline #811;
 }
 
 /*
@@ -113,24 +115,22 @@ nav table td:hover, nav table td:active, nav table td:focus {
     borrowed from SO 
 */
 
-::-webkit-scrollbar
-{
-    width: 12px;  /* for vertical scrollbars */
-    height: 12px; /* for horizontal scrollbars */
+::-webkit-scrollbar {
+  width: 12px; /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
 }
 
-::-webkit-scrollbar-track
-{
-    background: rgba(0, 0, 0, 0.1);
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
 }
 
-::-webkit-scrollbar-thumb
-{
-    background: rgba(0, 0, 0, 0.5);
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
 }
 
-@media(max-width: 500px){
-    #page, #footer {
-        width: 100%;
-    }
+@media (max-width: 500px) {
+  #page,
+  #footer {
+    width: 100%;
+  }
 }
