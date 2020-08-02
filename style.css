@@ -1,5 +1,5 @@
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #111;
@@ -14,6 +14,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  margin: 0 auto;
   height: 100%;
   overflow-y: scroll;
 }
@@ -24,6 +25,7 @@ a {
 }
 
 #page {
+  margin: 0 auto;
   width: 100%;
   min-height: 95%;
   padding-bottom: 5%;
@@ -50,6 +52,7 @@ a {
 }
 
 #titleUnderline {
+  margin: 0 auto;
   width: 50%;
   height: 2px;
   border-radius: 5em;
@@ -58,6 +61,7 @@ a {
 }
 
 nav {
+  margin: 0 auto;
   user-select: none;
   text-align: center;
   width: 75%;
@@ -86,6 +90,7 @@ nav table td:focus {
 }
 
 #content {
+  margin: 0 auto;
   margin-top: 5%;
   width: 80%;
   padding-left: 5%;
