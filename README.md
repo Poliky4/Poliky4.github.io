@@ -1,2 +1,3 @@
 # Poliky4.github.io
-Personal homepage for Pontus Molin
+
+My website, check it out at <https://poliky4.github.io>

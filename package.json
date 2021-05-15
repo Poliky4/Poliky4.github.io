@@ -1,0 +1,12 @@
+{
+  "name": "poliky4.github.io",
+  "version": "1.0.1",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github_hobby:poliky4/poliky4.github.io.git"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.0"
+  }
+}
