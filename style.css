@@ -154,10 +154,3 @@ main h3 {
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.5);
 }
-
-@media (max-width: 500px) {
-  .page,
-  #footer {
-    width: 100%;
-  }
-}
