@@ -15,40 +15,34 @@ let projects = {
 
 let pages = [home, about, projects];
 
-let utils = new Utils();
+removeClass(document.body, 'no-js');
 
 // set click events for buttons
 pages.forEach((page) => {
   page.btn.onclick = (e) => {
     e.preventDefault();
-    utils.hidePages();
-    utils.showPage(page);
+    hidePages();
+    showPage(page);
   };
 });
 
-utils.hidePages(); // hide all pages
-utils.showPage(home); // and show home
+hidePages();
+showPage(home);
 
-function Utils() {
-  // private
-  function removeClass(elem, c) {
-    elem.classList.remove(c);
-  }
-  function addClass(elem, c) {
-    elem.classList.add(c);
-  }
+function showPage(page) {
+  removeClass(page.div, 'hidden');
+  addClass(page.btn, 'selected');
+}
+function hidePages() {
+  pages.forEach((page) => {
+    addClass(page.div, 'hidden');
+    removeClass(page.btn, 'selected');
+  });
+}
 
-  // public
-  return {
-    showPage: function (page) {
-      removeClass(page.div, 'hidden');
-      addClass(page.btn, 'selected');
-    },
-    hidePages: function () {
-      pages.forEach((page) => {
-        addClass(page.div, 'hidden');
-        removeClass(page.btn, 'selected');
-      });
-    },
-  };
+function removeClass(elem, c) {
+  elem.classList.remove(c);
+}
+function addClass(elem, c) {
+  elem.classList.add(c);
 }
