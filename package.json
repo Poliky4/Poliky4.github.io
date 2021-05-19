@@ -1,12 +1,15 @@
 {
   "name": "poliky4.github.io",
   "version": "1.0.1",
-  "scripts": {},
+  "scripts": {
+    "start": "serve"
+  },
   "repository": {
     "type": "git",
     "url": "git@github_hobby:poliky4/poliky4.github.io.git"
   },
   "devDependencies": {
-    "prettier": "^2.3.0"
+    "prettier": "^2.3.0",
+    "serve": "^11.3.2"
   }
 }
